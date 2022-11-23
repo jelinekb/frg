@@ -38,4 +38,4 @@ ex.) README.md:3:Marker Fork for Python3
 (3) sublime-text (or another text editor to open selected files)
 
 # Limitations
-frg is limited to text files due
+frg is limited to text files due to dependency on ripgrep. frga is an extension to frg that used ripgrep-all to enable searching of common binary files (e.g., pdf, word, etc.) (coming soon)

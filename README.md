@@ -33,10 +33,37 @@ ex.) README.md:3:Marker Fork for Python3
 The frg() shell function can be copied and pasted into a terminal window. The frg funtion is run by entering "frg" at the command prompt. 
   
 ## .bashrc
-The frg() shell function can be made permanent within the terminal by ```source``ing the frg.sh.
+The frg() shell function can be made permanent within the terminal by ```source``ing frg.sh. On my machine, ```.bashrc``` is located at: ```~/.bashrc```. e  
+
+```
+cp <frg.sh file> ~/
+```
+
+Add the following to ```.bashrc``` to ```source``` frg() into the shell:
+```
+source frg.sh
+```
+
+Restart the terminal to load frg() into the shell and make it available for use.
+  
   
 ## .bashrc.d
+Using a ```.bashrc.d``` directory to store shell function is my preferred method because all files located within this directory can be sourced with a basic loop command. This makes it easy to add, remove, and change funtions within the shell based simply on which files are present in .bashrc.d.
 
+Make ```.bashrc.d``` directory and copy frg.sh
+```
+mkdir ~/.bashrc.d
+cp <frg.sh file> ~/.bashrc.d/
+```
+
+Add the following to ```.bashrc``` to ```source``` frg() into the shell:
+```
+while read filename
+do
+  source "$filename"
+done < <(find -L ~/.bashrc.d -type f)
+```
+Restart the terminal to load frg() into the shell and make it available for use.
   
 ## Dependencies
 (1) fzf

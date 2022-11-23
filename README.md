@@ -65,18 +65,26 @@ Restart the terminal to load frg() into the shell and make it available for use.
 (3) sublime-text (or another text editor to open selected files)
 
 # Details
+## Text Editor
+frg can open an editor directly to a selected line. The format for sublime-text is below. 
 
-## Data format:
+```
+subl "${selected[0]}:${selected[1]}"
+
+subl              editor
+"${selected[0]}   document file path
+${selected[1]}"   line number
+```
+
+## Data Format
+ripgrep returns a thruple of the file name, line number, and matching text.
+
 rg --line-number --no-heading --color=always --smart-case --no-messages
 returns "<file>:<linenumber>:<matching line>" (appears to be one indexed)
 ex.) README.md:3:Marker Fork for Python3
 {1}: file (README.md)
 {2}: line number (3)
 {3}: matching line (Marker Fork for Python3)
-
-
-
-
 
 # Limitations
 frg is limited to text files due to dependency on ripgrep. frga is an extension to frg that used ripgrep-all to enable searching of common binary files (e.g., pdf, word, etc.) (coming soon)

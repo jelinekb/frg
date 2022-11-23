@@ -2,7 +2,7 @@
 frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within files. The fzf and ripgrep search filters are independent of one another. This means that one, the other, or both filename and content filters can be applied. For example, pressing ESC will bypass the filename search filter such that 
 
 # Two Search Stages:
-(1) select (i.e., filter/limit) files to search (fzf), and
+(1) select (i.e., filter/limit) files to search (fzf), and  
 (2) search only within selected files (rg)
 
 # Three Search Modes:

@@ -1,3 +1,8 @@
+TODO: add youtube video
+https://stackoverflow.com/questions/11804820/how-can-i-embed-a-youtube-video-on-github-wiki-pages
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+
 # frg
 frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within files. The fzf and ripgrep search filters are independent of one another. This means that one, the other, or both filename and content filters can be applied. For example, pressing ESC will bypass the filename search filter such that the content of all files in the currect directly are searched using ripgrep.
 
@@ -17,9 +22,6 @@ Note-taking is one basic appliation of frg. I keep all of my data files within a
 # usage: frg
 (1) navigate to a desired directory, which will serve as the root directory for all searches within frg  
 (2) run "frg"
-
-
-
 
 
 # Installation

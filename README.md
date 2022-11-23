@@ -6,8 +6,8 @@ frg is a bash function that combines the abilty of fzf to rapidly search and sel
 (2) search only within selected files (rg)
 
 # Three Search Modes:
-(1) normal: files are first selected using fzf, and then rg search results for only those files are displayed
-(2) fzf select files: files can be selected and previewed in their entirety (i.e., essentially cat'ed into one preview)
+(1) normal: files are first selected using fzf, and then rg search results for only those files are displayed  
+(2) fzf select files: files can be selected and previewed in their entirety (i.e., essentially cat'ed into one preview)  
 (3) rg: pressing ESC on the first menu skips file selection/filtering causing rg to search all files within the directory
 
 # Application

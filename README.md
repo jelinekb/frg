@@ -1,5 +1,5 @@
 # frg
-frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within files. The fzf and ripgrep search filters are independent of one another. This means that one, the other, or both filename and content filters can be applied. For example, pressing ESC will bypass the filename search filter such that 
+frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within files. The fzf and ripgrep search filters are independent of one another. This means that one, the other, or both filename and content filters can be applied. For example, pressing ESC will bypass the filename search filter such that the content of all files in the currect directly are searched using ripgrep.
 
 # Two Search Stages:
 (1) select (i.e., filter/limit) files to search (fzf), and  
@@ -14,11 +14,9 @@ frg is a bash function that combines the abilty of fzf to rapidly search and sel
 Note-taking is one basic appliation of frg. I keep all of my data files within a large directory. Sometimes I know the file (or several files) which contain the text for which I am searching. In this case, the fzf filename search filter helps to keep the search results from getting overwhelmed with irrelevant files. It is particularly usefule for certain types of searches, for example, programming langauge constructs like "break", "continue", and "[", which are often common in typical documents.  Othertimes, I may have related files in a smaller directory and want to quickly preview them. Once the desired content is found, it can be opened to the exact line in an editor with a single press of Enter.
 
 
-
-# fuzzy select files and search within the selected files (w/ preview)
-
 # usage: frg
-
+(1) navigate to a desired directory, which will serve as the root directory for all searches within frg  
+(2) run "frg"
 
 
 
@@ -31,6 +29,14 @@ ex.) README.md:3:Marker Fork for Python3
 {3}: matching line (Marker Fork for Python3)
 
 # Installation
+## Temporary (cut & paste)
+The frg() shell function can be copied and pasted into a terminal window. The frg funtion is run by entering "frg" at the command prompt. 
+  
+## .bashrc
+The frg() shell function can be made permanent within the terminal by ```source``ing the frg.sh.
+  
+## .bashrc.d
+
   
 ## Dependencies
 (1) fzf

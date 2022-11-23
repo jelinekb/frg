@@ -1,8 +1,5 @@
 # frg
-
-# fuzzy select files and search within the selected files (w/ preview)
-# usage: frg
-
+frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within those files. The fzf and ripgrep search filters are independent of one another, so that one, the other, or both filename and content filters can be applied.
 
 # Two stage search:
 (1) select (i.e., filter/limit) files to search (fzf), and
@@ -13,6 +10,17 @@
 (2) fzf select files: files can be selected and previewed in their entirety (i.e., essentially cat'ed into one preview)
 (3) rg: pressing ESC on the first menu skips file selection/filtering causing rg to search all files within the directory
 
+
+
+
+
+# fuzzy select files and search within the selected files (w/ preview)
+
+# usage: frg
+
+
+
+
 # Data format:
 rg --line-number --no-heading --color=always --smart-case --no-messages
 returns "<file>:<linenumber>:<matching line>" (appears to be one indexed)
@@ -22,3 +30,8 @@ ex.) README.md:3:Marker Fork for Python3
 {3}: matching line (Marker Fork for Python3)
 
 # Installation
+  
+## Dependencies
+(1) fzf
+(2) ripgrep
+(3) sublime-text (or another text editor to open selected files)

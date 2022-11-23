@@ -20,21 +20,15 @@ Note-taking is one basic appliation of frg. I keep all of my data files within a
 
 
 
-# Data format:
-rg --line-number --no-heading --color=always --smart-case --no-messages
-returns "<file>:<linenumber>:<matching line>" (appears to be one indexed)
-ex.) README.md:3:Marker Fork for Python3
-{1}: file (README.md)
-{2}: line number (3)
-{3}: matching line (Marker Fork for Python3)
+
 
 # Installation
 ## Temporary (cut & paste)
 The frg() shell function can be copied and pasted into a terminal window. The frg funtion is run by entering "frg" at the command prompt. 
   
 ## .bashrc
-The frg() shell function can be made permanent within the terminal by ```source```ing frg.sh. On my machine, ```.bashrc``` is located at: ```~/.bashrc```. e  
-
+The frg() shell function can be made permanent within the terminal by ```source```ing frg.sh. On my machine, ```.bashrc``` is located at: ```~/.bashrc```.   
+Copy frg.sh
 ```
 cp <frg.sh file> ~/
 ```
@@ -66,9 +60,23 @@ done < <(find -L ~/.bashrc.d -type f)
 Restart the terminal to load frg() into the shell and make it available for use.
   
 ## Dependencies
-(1) fzf
-(2) ripgrep
+(1) fzf  
+(2) ripgrep  
 (3) sublime-text (or another text editor to open selected files)
+
+# Details
+
+## Data format:
+rg --line-number --no-heading --color=always --smart-case --no-messages
+returns "<file>:<linenumber>:<matching line>" (appears to be one indexed)
+ex.) README.md:3:Marker Fork for Python3
+{1}: file (README.md)
+{2}: line number (3)
+{3}: matching line (Marker Fork for Python3)
+
+
+
+
 
 # Limitations
 frg is limited to text files due to dependency on ripgrep. frga is an extension to frg that used ripgrep-all to enable searching of common binary files (e.g., pdf, word, etc.) (coming soon)

@@ -1,5 +1,5 @@
 # frg
-frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within those files. The fzf and ripgrep search filters are independent of one another, so that one, the other, or both filename and content filters can be applied.
+frg is a bash function that combines the abilty of fzf to rapidly search and select files by name, and ripgrep to search contents within files. The fzf and ripgrep search filters are independent of one another. This means that one, the other, or both filename and content filters can be applied. For example, pressing ESC will bypass the filename search filter such that 
 
 # Two stage search:
 (1) select (i.e., filter/limit) files to search (fzf), and
@@ -10,6 +10,7 @@ frg is a bash function that combines the abilty of fzf to rapidly search and sel
 (2) fzf select files: files can be selected and previewed in their entirety (i.e., essentially cat'ed into one preview)
 (3) rg: pressing ESC on the first menu skips file selection/filtering causing rg to search all files within the directory
 
+# Application
 
 
 
@@ -35,3 +36,6 @@ ex.) README.md:3:Marker Fork for Python3
 (1) fzf
 (2) ripgrep
 (3) sublime-text (or another text editor to open selected files)
+
+# Limitations
+frg is limited to text files due

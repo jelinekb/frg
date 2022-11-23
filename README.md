@@ -23,10 +23,10 @@ Note-taking is one basic appliation of frg. I keep all of my data files within a
 
 
 # Installation
-## Temporary (cut & paste)
+## Cut & Past frg() into terminal (temporary)
 The frg() shell function can be copied and pasted into a terminal window. The frg funtion is run by entering "frg" at the command prompt. 
   
-## .bashrc
+## Source frg() within .bashrc (permanent)
 The frg() shell function can be made permanent within the terminal by ```source```ing frg.sh. On my machine, ```.bashrc``` is located at: ```~/.bashrc```.   
 Copy frg.sh
 ```
@@ -41,7 +41,7 @@ source frg.sh
 Restart the terminal to load frg() into the shell and make it available for use.
   
   
-## .bashrc.d
+## Source frg() from .bashrc.d directory (permanent)
 Using a ```.bashrc.d``` directory to store shell function is my preferred method because all files located within this directory can be sourced with a basic loop command. This makes it easy to add, remove, and change funtions within the shell based simply on which files are present in .bashrc.d.
 
 Make ```.bashrc.d``` directory and copy frg.sh
